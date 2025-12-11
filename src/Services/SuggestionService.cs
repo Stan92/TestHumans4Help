@@ -4,7 +4,7 @@ namespace TestHumans4Help.Services;
 /// Provides functionality for generating suggestions based on a search term
 /// and calculating string similarity using a custom difference algorithm.
 /// </summary>
-public class IAmTheTest:IIAmTheTest
+public class SuggestionService:ISuggestion
 {
     /// <summary>
     /// Generates a list of suggestions from the provided choices whose
@@ -71,7 +71,6 @@ public class IAmTheTest:IIAmTheTest
                 matrix[i, j] = Math.Min(Math.Min(matrix[i - 1, j] + 1, matrix[i, j - 1] + 1), matrix[i - 1, j - 1] + cost);
             }
         }
-
         return matrix[choice.Length, searchString.Length];
     }
 }

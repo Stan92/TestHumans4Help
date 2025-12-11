@@ -3,7 +3,7 @@
 /// Defines the contract for services capable of generating suggestions
 /// based on a search term and a collection of candidate strings.
 /// </summary>
-internal interface IIAmTheTest
+internal interface ISuggestion
 {
     /// <summary>
     /// Generates a list of suggestions from the provided choices whose
